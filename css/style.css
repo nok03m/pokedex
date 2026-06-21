@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+:root {
+  --primary-color: rgb(84, 173, 248);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 24px;
+}
+
+.video-background {
+  position: fixed;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-height: 80%;
+  gap: 28px;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  overflow: auto;
+}
+
+#search-pokemon {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  gap: 10px;
+}
+
+#pokemons {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  
+}
+
+#pokemon-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+div[id^="box-"] > ul {
+  list-style: none;
+}
+
+#pokemons:hover {
+  animation: heartbeatText 1s infinite alternate;
+}
+
+.title {
+  animation: heartbeatText 1s infinite alternate;
+}
+
+@keyframes heartbeatText {
+  from {
+    color: initial;
+  }
+  to {
+    color: var(--primary-color);
+  }
+}

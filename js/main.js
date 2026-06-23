@@ -37,7 +37,7 @@ const selectPokemon = async (pokemonUrl) => {
 
             pokemonInfoEl.innerHTML = `
                 <h2 class="title">${response.name}</h2>
-                <img src="${response.sprites.back_default}" alt="Image of ${response.name}.">
+                <img src="${response.sprites.front_default}" alt="Image of ${response.name}.">
                 <span>Type: ${response.types.map(type => `${type.type.name} `).join('')}</span>
                 <div id="box-stats">
                     <h2 class="title">Stats</h2>
